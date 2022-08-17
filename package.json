@@ -1,4 +1,5 @@
 {
+  "homepage": "http://lgnvk.github.io/FWT_ART_GALLERY_V2",
   "name": "fwt_art_gallery_v2",
   "version": "0.1.0",
   "private": true,
@@ -20,13 +21,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "eject": "react-scripts eject",
+    "lint": "eslint --fix --color src/",
+    "prepare": "husky install"
   },
   "browserslist": {
     "production": [
@@ -39,5 +36,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.33.1",
+    "@typescript-eslint/parser": "^5.33.1",
+    "eslint": "^8.22.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-react": "^7.30.1",
+    "gh-pages": "^4.0.0",
+    "husky": "^8.0.1",
+    "prettier": "2.7.1"
   }
 }
