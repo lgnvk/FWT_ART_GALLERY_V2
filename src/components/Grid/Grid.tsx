@@ -9,7 +9,7 @@ interface GridProps {
 const Grid: FC<GridProps> = ({ cards }) => {
   return (
     <div className="grid">
-      {cards.map((card) => (
+      {cards.map((card) => {return (
         <div key={card.id} className="grid__item">
           <div className="card">
             <img src={card.imgUrl} alt="smth" className="card__img" />
@@ -21,7 +21,7 @@ const Grid: FC<GridProps> = ({ cards }) => {
             </div>
           </div>
         </div>
-      ))}
+      )})}
     </div>
   );
 };
