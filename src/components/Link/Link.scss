@@ -1,0 +1,39 @@
+@import '../../css/index.css';
+.wrapper {
+  width: max-content;
+  .link {
+    text-decoration: none;
+    color: var(--primary-light-gray);
+  }
+  .underline {
+    margin-top: 1px;
+    height: 1px;
+    width: 100%;
+    background-color: var(--primary-light-gray);
+  }
+  &:hover {
+    .link {
+      color: var(--primary-white);
+    }
+    .underline {
+      background-color: var(--primary-white);
+    }
+  }
+}
+
+.wrapper.light {
+  .link {
+    color: var(--primary-dark-gray);
+  }
+  .underline {
+    background-color: var(--primary-dark-gray);
+  }
+  &:hover {
+    .link {
+      color: var(--primary-black);
+    }
+    .underline {
+      background-color: var(--primary-black);
+    }
+  }
+}
