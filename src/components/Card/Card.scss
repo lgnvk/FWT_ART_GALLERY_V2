@@ -20,6 +20,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    @media (min-width: 1440px) {
+      width: 75%;
+    }
   }
   &__title {
     margin-left: 12px;
@@ -27,6 +30,9 @@
     font-family: Cormorant;
     font-weight: 500;
     color: var(--primary-white);
+    @media (min-width: 768px) {
+      font-size: 16px;
+    }
   }
   &__year {
     margin-left: 12px;
@@ -34,36 +40,21 @@
     font-size: 8px;
     font-family: Inter;
     color: var(--accent-gold);
-  }
-  &__arrow {
-    width: 10%;
-    height: 100%;
-    background-color: var(--accent-gold);
-    position: absolute;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
-@media (min-width: 768px) {
-  .card {
-    &__title {
-      font-size: 16px;
-    }
-    &__year {
+    @media (min-width: 768px) {
       font-size: 12px;
     }
   }
 }
-@media (min-width: 1440px) {
-  .card {
-    &__info {
-      width: 75%;
-    }
-    &__arrow {
-      display: none;
-    }
+&__arrow {
+  width: 10%;
+  height: 100%;
+  background-color: var(--accent-gold);
+  position: absolute;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (min-width: 1440px) {
+    display: none;
   }
 }
