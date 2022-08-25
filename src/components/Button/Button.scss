@@ -1,13 +1,17 @@
-@import '../../css/index.css';
+@import '../../scss/index.scss';
 
 .button {
-  text-transform: uppercase;
   width: 300px;
-  height: 40px;
-  color: var(--primary-light-gray);
+  height: 45px;
+  text-transform: uppercase;
   background: none;
-  text-decoration: underline;
   border: none;
+  font-family: 'Inter';
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  color: var(--primary-light-gray);
+  text-decoration: underline;
   &:hover {
     color: var(--primary-white);
   }
@@ -17,46 +21,43 @@
   &:disabled {
     color: var(--secondary-gray);
   }
-}
-
-.light {
-  color: var(--primary-dark-gray);
-  &:hover {
-    color: var(--primary-black);
+  &.light {
+    color: var(--primary-dark-gray);
+    &:hover {
+      color: var(--primary-black);
+    }
+    &:focus {
+      color: var(--primary--black);
+    }
+    &:disabled {
+      color: var(--primary-light-gray);
+    }
   }
-  &:focus {
-    color: var(--primary--black);
-  }
-  &:disabled {
-    color: var(--primary-light-gray);
-  }
-}
-
-.filled {
-  color: var(--primary-white);
-  background: var(--accent-gold);
-  text-decoration: none;
-  border-radius: 30px;
-  &:hover {
-    box-shadow: 0px 4px 10px rgba(171, 137, 86, 0.25);
-  }
-  &:focus {
-    background: #ba9052;
-    box-shadow: 0px 4px 10px rgba(171, 137, 86, 0.25);
-  }
-  &:disabled {
-    opacity: 0.5;
-  }
-}
-
-.filled.light {
-  color: var(--primary-white);
-  background-color: var(--primary-black);
-  &:hover {
-    box-shadow: rgba(0, 0, 0, 0.25);
-  }
-  &:focus {
-    background-color: #232323;
-    box-shadow: rgba(0, 0, 0, 0.25);
+  &.filled {
+    color: var(--primary-white);
+    background-color: var(--accent-gold);
+    text-decoration: none;
+    border-radius: 30px;
+    &:hover {
+      box-shadow: 0px 4px 10px rgba(171, 137, 86, 0.25);
+    }
+    &:focus {
+      background: #ba9052;
+      box-shadow: 0px 4px 10px rgba(171, 137, 86, 0.25);
+    }
+    &:disabled {
+      opacity: 0.5;
+    }
+    &.light {
+      color: var(--primary-white);
+      background-color: var(--primary-black);
+      &:hover {
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+      }
+      &:focus {
+        background-color: #232323;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+      }
+    }
   }
 }
