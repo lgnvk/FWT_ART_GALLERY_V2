@@ -9,15 +9,15 @@ type GridProps = {
 const Grid: FC<GridProps> = ({ cards }) => {
   return (
     <div className="grid">
-      {cards.map((card) => {
+      {cards.map(({ id, imgUrl, title, name, year }) => {
         return (
-          <div key={card.id} className="grid__item">
+          <div key={id} className="grid__item">
             <div className="card">
-              <img src={card.imgUrl} alt="smth" className="card__img" />
+              <img src={imgUrl} alt="smth" className="card__img" />
               <div className="card__info">
-                <div className="card__title">{card.title}</div>
-                <div>{card.name}</div>
-                <div className="card__year">{card.year}</div>
+                <div className="card__title">{title}</div>
+                <div>{name}</div>
+                <div className="card__year">{year}</div>
                 <div className="card__arrow">.</div>
               </div>
             </div>
