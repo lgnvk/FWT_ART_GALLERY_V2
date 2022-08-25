@@ -9,12 +9,9 @@ type ButtonProps = {
   value: string;
 };
 
-const Button: FC<ButtonProps & HTMLButtonElement> = ({
-  handleClick,
-  theme,
-  buttonType,
-  value,
-}) => {
+type AllProps = ButtonProps & HTMLButtonElement;
+
+const Button: FC<AllProps> = ({ handleClick, theme, buttonType, value }) => {
   const styles = cn('button', theme, buttonType);
   return (
     <button type="button" onClick={() => handleClick} className={styles}>
