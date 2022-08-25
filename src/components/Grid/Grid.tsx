@@ -2,9 +2,9 @@ import React, { FC } from 'react';
 import './Grid.scss';
 import ICard from '../../types';
 
-interface GridProps {
+type GridProps = {
   cards: ICard[];
-}
+};
 
 const Grid: FC<GridProps> = ({ cards }) => {
   return (
