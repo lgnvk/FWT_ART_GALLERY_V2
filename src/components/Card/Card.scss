@@ -44,17 +44,17 @@
       font-size: 12px;
     }
   }
-}
-&__arrow {
-  width: 10%;
-  height: 100%;
-  background-color: var(--accent-gold);
-  position: absolute;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  @media (min-width: 1440px) {
-    display: none;
+  &__arrow {
+    width: 10%;
+    height: 100%;
+    background-color: var(--accent-gold);
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media (min-width: 1440px) {
+      display: none;
+    }
   }
 }

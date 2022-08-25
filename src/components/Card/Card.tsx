@@ -7,11 +7,11 @@ type CardProps = {
   name: string;
   imgUrl: string;
   year: string;
-  classnames: string;
+  className: string;
 };
 
-const Card: FC<CardProps> = ({ title, imgUrl, name, year, classnames }) => {
-  const styles = cn('card', classnames);
+const Card: FC<CardProps> = ({ title, imgUrl, name, year, className }) => {
+  const styles = cn('card', className);
   return (
     <div className={styles}>
       <img src={imgUrl} alt="smth" className="card__img" />
