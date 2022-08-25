@@ -1,18 +1,17 @@
 import React from 'react';
-import Grid from './Grid.tsx';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+import Grid from '.';
 import './Grid.scss';
 import img from '../../img/image.jpg';
 
 export default {
   title: 'Grid',
   component: Grid,
-};
+} as ComponentMeta<typeof Grid>;
 
-const Template = ({ ...args }) => {
+export const Default: ComponentStory<typeof Grid> = ({ ...args }) => {
   return <Grid {...args} cards={args.cards} />;
 };
-
-export const Default = Template.bind({});
 
 Default.args = {
   cards: [
