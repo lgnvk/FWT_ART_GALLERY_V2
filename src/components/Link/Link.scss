@@ -19,21 +19,20 @@
       background-color: var(--primary-white);
     }
   }
-}
-
-.wrapper.light {
-  .link {
-    color: var(--primary-dark-gray);
-  }
-  .underline {
-    background-color: var(--primary-dark-gray);
-  }
-  &:hover {
+  &.light {
     .link {
-      color: var(--primary-black);
+      color: var(--primary-dark-gray);
     }
     .underline {
-      background-color: var(--primary-black);
+      background-color: var(--primary-dark-gray);
+    }
+    &:hover {
+      .link {
+        color: var(--primary-black);
+      }
+      .underline {
+        background-color: var(--primary-black);
+      }
     }
   }
 }
