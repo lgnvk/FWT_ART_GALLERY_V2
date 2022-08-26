@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
 import './Grid.scss';
-import ICard from '../../types';
+import CardType from '../../types';
 
 type GridProps = {
-  cards: ICard[];
+  cards: CardType[];
 };
 
 const Grid: FC<GridProps> = ({ cards }) => {

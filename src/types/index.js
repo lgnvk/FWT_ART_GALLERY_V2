@@ -1,3 +1,3 @@
-import ICard from './types.ts';
+import CardType from './types.ts';
 
-export default ICard;
+export default CardType;
