@@ -14,7 +14,7 @@ const Card: FC<CardProps> = ({ title, imgUrl, name, year, className }) => {
   const styles = cn('card', className);
   return (
     <div className={styles}>
-      <img src={imgUrl} alt="smth" className="card__img" />
+      <img src={imgUrl} alt="Card" className="card__img" />
       <div className="card__info">
         <div className="card__title">{title}</div>
         <div>{name}</div>
