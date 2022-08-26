@@ -2,12 +2,15 @@ import React, { FC, ReactNode } from 'react';
 import './Link.scss';
 import cn from 'classnames';
 
-interface LinkProps {
+type LinkProps = {
   theme: 'dark' | 'light';
   link: string;
   children: ReactNode;
-}
-const Link: FC<LinkProps & HTMLAnchorElement> = ({ theme, link, children }) => {
+};
+
+type AllProps = LinkProps & HTMLAnchorElement;
+
+const Link: FC<AllProps> = ({ theme, link, children }) => {
   const styles = cn('wrapper', theme);
   return (
     <div className={styles}>
