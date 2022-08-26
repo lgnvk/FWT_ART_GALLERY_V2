@@ -1,0 +1,38 @@
+@import '../../css/index.css';
+.link {
+  width: max-content;
+  &__item {
+    text-decoration: none;
+    color: var(--primary-light-gray);
+  }
+  &__underline {
+    margin-top: 1px;
+    height: 1px;
+    width: 100%;
+    background-color: var(--primary-light-gray);
+  }
+  &:hover {
+    .link__item {
+      color: var(--primary-white);
+    }
+    .link__underline {
+      background-color: var(--primary-white);
+    }
+  }
+  &.light {
+    &__item {
+      color: var(--primary-dark-gray);
+    }
+    &__underline {
+      background-color: var(--primary-dark-gray);
+    }
+    &:hover {
+      .link__item {
+        color: var(--primary-black);
+      }
+      .link__underline {
+        background-color: var(--primary-black);
+      }
+    }
+  }
+}
