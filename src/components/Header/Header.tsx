@@ -1,8 +1,13 @@
-import React, { FC } from 'react';
+import React, { FC, useLayoutEffect, useContext } from 'react';
 import './Header.scss';
-import { Logo, Burger, ThemeDark } from '../svgs';
+import { ThemeContext } from '../../context';
+import { Logo, Burger, ThemeDark, ThemeLight } from '../svgs';
 
 const Header: FC<HTMLElement> = () => {
+  const { theme, themeToggler } = useContext(ThemeContext);
+  useLayoutEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+  }, [theme]);
   return (
     <div className="header">
       <Logo className="header__logo" />
@@ -16,7 +21,17 @@ const Header: FC<HTMLElement> = () => {
               Sign up
             </button>
           </div>
-          <ThemeDark className="header__button" />
+          {theme === 'dark' ? (
+            <ThemeDark
+              className="header__button header__button_theme"
+              onClick={themeToggler}
+            />
+          ) : (
+            <ThemeLight
+              className="header__button header__button_theme"
+              onClick={themeToggler}
+            />
+          )}
         </div>
       </div>
       <button type="button" className="header__burger">

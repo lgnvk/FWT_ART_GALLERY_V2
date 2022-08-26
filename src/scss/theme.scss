@@ -1,0 +1,13 @@
+html[data-theme='dark'] {
+  --background-color: var(--primary-black);
+  --text-color: var(--primary-light-gray);
+
+  --header-theme-hover: var(--primary-white);
+}
+
+html[data-theme='light'] {
+  --background-color: var(--primary-white);
+  --text-color: var(--primary-dark-gray);
+
+  --header-theme-hover: var(--primary-black);
+}
