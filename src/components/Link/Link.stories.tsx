@@ -8,7 +8,7 @@ export default {
 } as ComponentMeta<typeof Link>;
 
 export const Default: ComponentStory<typeof Link> = (args) => (
-  <Link {...args} href="." />
+  <Link {...args} />
 );
 
 Default.args = {
