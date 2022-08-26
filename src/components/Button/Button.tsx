@@ -12,7 +12,7 @@ type ButtonProps = HTMLButtonElement & {
 const Button: FC<ButtonProps> = ({ handleClick, theme, buttonType, value }) => {
   const styles = cn('button', theme, buttonType);
   return (
-    <button type="button" onClick={() => handleClick()} className={styles}>
+    <button type="button" onClick={handleClick} className={styles}>
       {value}
     </button>
   );
