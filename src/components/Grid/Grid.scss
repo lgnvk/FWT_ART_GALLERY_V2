@@ -2,16 +2,20 @@
 .grid {
   width: 100%;
   padding: 80px 20px 80px 20px;
-  background-color: var(--primary-black);
+  background-color: var(--background-color);
   display: flex;
   flex-direction: column;
   @media (min-width: 768px) {
+    padding: 100px 20px 100px 20px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
   }
+  @media (min-width: 1440px) {
+    padding: 120px 100px 120px 100px;
+  }
   &__item {
-    width: 30%;
+    width: 100%;
     margin: 0 auto;
     margin-bottom: 20px;
     @media (min-width: 768px) {
@@ -22,66 +26,6 @@
     @media (min-width: 1440px) {
       width: 31.5%;
       margin-bottom: 32px;
-    }
-  }
-}
-
-.card {
-  position: relative;
-  font-size: 0;
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-  &__img {
-    height: 100%;
-    width: 100%;
-    object-fit: fill;
-  }
-  &__info {
-    width: 90%;
-    height: 25%;
-    bottom: 0;
-    position: absolute;
-    background-color: var(--primary-black);
-    text-transform: uppercase;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    @media (min-width: 1440px) {
-      width: 75%;
-    }
-  }
-  &__title {
-    margin-left: 12px;
-    font-size: 12px;
-    font-family: Cormorant;
-    font-weight: 500;
-    color: var(--primary-white);
-    @media (min-width: 768px) {
-      font-size: 16px;
-    }
-  }
-  &__year {
-    margin-left: 12px;
-    margin-top: 4px;
-    font-size: 8px;
-    font-family: Inter;
-    color: var(--accent-gold);
-    @media (min-width: 768px) {
-      font-size: 12px;
-    }
-  }
-  &__arrow {
-    width: 10%;
-    height: 100%;
-    background-color: var(--accent-gold);
-    position: absolute;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    @media (min-width: 1440px) {
-      display: none;
     }
   }
 }

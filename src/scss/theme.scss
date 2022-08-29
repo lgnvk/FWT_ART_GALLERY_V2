@@ -3,6 +3,8 @@ html[data-theme='dark'] {
   --text-color: var(--primary-light-gray);
 
   --header-theme-hover: var(--primary-white);
+
+  --accent-color: var(--accent-gold);
 }
 
 html[data-theme='light'] {
@@ -10,4 +12,6 @@ html[data-theme='light'] {
   --text-color: var(--primary-dark-gray);
 
   --header-theme-hover: var(--primary-black);
+
+  --accent-color: var(--accent-red);
 }

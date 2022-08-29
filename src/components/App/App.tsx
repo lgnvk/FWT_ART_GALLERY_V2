@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import './App.css';
 import { ThemeContext, defaultContext } from '../../context';
 import Header from '../Header';
+import Grid from '../Grid';
 
 const App = () => {
   const [theme, setTheme] = useState(defaultContext.theme);
@@ -18,6 +19,7 @@ const App = () => {
     <ThemeContext.Provider value={providerProps}>
       <div className="App">
         <Header />
+        <Grid />
       </div>
     </ThemeContext.Provider>
   );
