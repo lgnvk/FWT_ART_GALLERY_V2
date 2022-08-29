@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import './App.css';
+import './App.scss';
 import { ThemeContext, defaultContext } from '../../context';
 import Header from '../Header';
 import Grid from '../Grid';

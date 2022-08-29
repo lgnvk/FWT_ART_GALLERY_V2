@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { FC } from 'react';
 import './Footer.scss';
 import { Vk, Facebook, Instagram } from '../svgs';
 
-const Footer = () => {
+const Footer: FC<HTMLElement> = () => {
   return (
     <div className="footer">
       <div className="footer__wrapper">
