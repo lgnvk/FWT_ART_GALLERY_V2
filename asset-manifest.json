@@ -1,13 +1,18 @@
 {
   "files": {
-    "main.css": "/FWT_ART_GALLERY_V2/static/css/main.abd64e84.css",
-    "main.js": "/FWT_ART_GALLERY_V2/static/js/main.d4086966.js",
+    "main.css": "/FWT_ART_GALLERY_V2/static/css/main.68599410.css",
+    "main.js": "/FWT_ART_GALLERY_V2/static/js/main.d85c23a4.js",
+    "static/media/CormorantSC-Bold.ttf": "/FWT_ART_GALLERY_V2/static/media/CormorantSC-Bold.f2a8f11022ccb5c6d961.ttf",
+    "static/media/CormorantSC-Medium.ttf": "/FWT_ART_GALLERY_V2/static/media/CormorantSC-Medium.9fa0cf1daac9461e1372.ttf",
+    "static/media/Inter-Bold.ttf": "/FWT_ART_GALLERY_V2/static/media/Inter-Bold.88fa7ae373b07b41ecce.ttf",
+    "static/media/Inter-Medium.ttf": "/FWT_ART_GALLERY_V2/static/media/Inter-Medium.6dcbc9bed1ec438907ee.ttf",
+    "static/media/Inter-Light.ttf": "/FWT_ART_GALLERY_V2/static/media/Inter-Light.eec8664621fec98efb37.ttf",
     "index.html": "/FWT_ART_GALLERY_V2/index.html",
-    "main.abd64e84.css.map": "/FWT_ART_GALLERY_V2/static/css/main.abd64e84.css.map",
-    "main.d4086966.js.map": "/FWT_ART_GALLERY_V2/static/js/main.d4086966.js.map"
+    "main.68599410.css.map": "/FWT_ART_GALLERY_V2/static/css/main.68599410.css.map",
+    "main.d85c23a4.js.map": "/FWT_ART_GALLERY_V2/static/js/main.d85c23a4.js.map"
   },
   "entrypoints": [
-    "static/css/main.abd64e84.css",
-    "static/js/main.d4086966.js"
+    "static/css/main.68599410.css",
+    "static/js/main.d85c23a4.js"
   ]
 }
