@@ -3,6 +3,7 @@ import './App.css';
 import { ThemeContext, defaultContext } from '../../context';
 import Header from '../Header';
 import Grid from '../Grid';
+import Footer from '../Footer';
 
 const App = () => {
   const [theme, setTheme] = useState(defaultContext.theme);
@@ -20,6 +21,7 @@ const App = () => {
       <div className="App">
         <Header />
         <Grid />
+        <Footer />
       </div>
     </ThemeContext.Provider>
   );
