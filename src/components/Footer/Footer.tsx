@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import './Footer.scss';
 import { Vk, Facebook, Instagram } from '../svgs';
+import './Footer.scss';
 
 const Footer: FC<HTMLElement> = () => {
   return (

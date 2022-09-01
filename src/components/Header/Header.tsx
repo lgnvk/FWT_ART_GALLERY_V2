@@ -1,9 +1,9 @@
 import React, { FC, useLayoutEffect, useContext, useState } from 'react';
-import './Header.scss';
 import cn from 'classnames';
 import { ThemeContext } from '../../context';
 import { Logo, Burger, ThemeDark, ThemeLight, Cross } from '../svgs';
 import Button from '../Button';
+import './Header.scss';
 
 const Header: FC<HTMLElement> = () => {
   const { theme, themeToggler } = useContext(ThemeContext);

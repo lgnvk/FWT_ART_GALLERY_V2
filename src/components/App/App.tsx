@@ -1,9 +1,9 @@
 import React, { useState, useMemo } from 'react';
-import './App.scss';
 import { ThemeContext, defaultContext } from '../../context';
 import Header from '../Header';
 import Grid from '../Grid';
 import Footer from '../Footer';
+import './App.scss';
 
 const App = () => {
   const [theme, setTheme] = useState(defaultContext.theme);

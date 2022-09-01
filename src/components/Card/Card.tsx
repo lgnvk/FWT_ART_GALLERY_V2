@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import cn from 'classnames';
-import './Card.scss';
 import { Arrow } from '../svgs/index';
+import './Card.scss';
 
 type CardProps = {
   title: string;

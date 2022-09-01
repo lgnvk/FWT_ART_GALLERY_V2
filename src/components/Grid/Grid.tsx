@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
-import './Grid.scss';
 import cards from '../../data/cardsMock';
 import Card from '../Card';
+import './Grid.scss';
 
 type CardType = {
   id: number;

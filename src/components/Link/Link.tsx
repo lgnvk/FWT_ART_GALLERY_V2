@@ -1,6 +1,6 @@
 import React, { FC, ReactNode } from 'react';
-import './Link.scss';
 import cn from 'classnames';
+import './Link.scss';
 
 type LinkProps = HTMLAnchorElement & {
   theme: 'dark' | 'light';
