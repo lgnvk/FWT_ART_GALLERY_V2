@@ -20,6 +20,7 @@
   &:disabled {
     color: var(--secondary-gray);
   }
+
   &.light {
     color: var(--primary-dark-gray);
     &:hover {
@@ -32,6 +33,7 @@
       color: var(--primary-light-gray);
     }
   }
+
   &.filled {
     color: var(--primary-white);
     background-color: var(--accent-gold);
@@ -47,6 +49,7 @@
     &:disabled {
       opacity: 0.5;
     }
+
     &.light {
       color: var(--primary-white);
       background-color: var(--primary-black);

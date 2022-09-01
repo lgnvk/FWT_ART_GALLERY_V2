@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import type { ReactNode, ButtonHTMLAttributes } from 'react';
-import cn from 'classnames';
-import './Button.scss';
+import cn from 'classnames/bind';
+import styles from './Button.scss';
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   handleClick?: () => void;
@@ -12,13 +12,17 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 
 const Button: FC<ButtonProps> = ({
   handleClick,
-  theme = 'light',
+  theme = 'dark',
   buttonType = 'outlined',
   children,
 }) => {
-  const styles = cn('button', theme, buttonType);
+  const cx = cn.bind(styles);
   return (
-    <button type="button" onClick={handleClick} className={styles}>
+    <button
+      type="button"
+      onClick={handleClick}
+      className={cx('button', theme, buttonType)}
+    >
       {children}
     </button>
   );

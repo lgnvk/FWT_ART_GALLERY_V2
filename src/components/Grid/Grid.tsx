@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
+import cn from 'classnames/bind';
 import Card from '../Card';
-import './Grid.scss';
+import styles from './Grid.scss';
 
 type CardType = {
   id: number;
@@ -15,11 +16,12 @@ type GridProps = {
 };
 
 const Grid: FC<GridProps> = ({ cards }) => {
+  const cx = cn.bind(styles);
   return (
-    <div className="grid">
+    <div className={cx('grid')}>
       {cards.map(({ id, imgUrl, title, name, year }) => {
         return (
-          <div key={id} className="grid__item">
+          <div key={id} className={cx('grid__item')}>
             <Card imgUrl={imgUrl} title={title} name={name} year={year} />
           </div>
         );

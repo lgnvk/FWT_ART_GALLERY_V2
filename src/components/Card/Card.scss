@@ -4,11 +4,13 @@
   width: 100%;
   height: auto;
   overflow: hidden;
+
   &__img {
     height: 100%;
     width: 100%;
     object-fit: fill;
   }
+
   &__info {
     width: 92%;
     height: 25%;
@@ -35,6 +37,7 @@
       }
     }
   }
+
   &__title {
     margin-left: 12px;
     font-size: 12px;
@@ -45,6 +48,7 @@
       font-size: 16px;
     }
   }
+
   &__year {
     margin-left: 12px;
     margin-top: 4px;
@@ -55,6 +59,7 @@
       font-size: 12px;
     }
   }
+
   &__arrow {
     width: 10%;
     height: 100%;
@@ -70,6 +75,7 @@
     @media (min-width: 1440px) {
       display: none;
     }
+
     &-item {
       height: 100%;
       width: 95%;

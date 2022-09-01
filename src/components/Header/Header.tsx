@@ -1,75 +1,75 @@
 import React, { FC, useLayoutEffect, useContext, useState } from 'react';
-import cn from 'classnames';
+import cn from 'classnames/bind';
 import { ThemeContext } from '../../context';
 import { Logo, Burger, ThemeDark, ThemeLight, Cross } from '../svgs';
 import Button from '../Button';
-import './Header.scss';
+import styles from './Header.scss';
 
 const Header: FC = () => {
   const { theme, themeToggler } = useContext(ThemeContext);
   const [menuActive, setMenu] = useState(false);
+  const cx = cn.bind(styles);
+
   useLayoutEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
   }, [theme]);
   const menuToggler = () => {
     setMenu(!menuActive);
   };
-  const themeRound = cn({
-    header__button_round: theme === 'dark' || theme === 'light',
-  });
-  const modal = cn('header__modal', {
-    header__modal_active: menuActive,
-  });
   return (
-    <div className="header">
-      <Logo className="header__logo" />
-      <div className="header__menu">
-        <div className="header__buttons">
-          <div className="header__wrapper">
-            <button type="button" className="header__button">
+    <div className={cx('header')}>
+      <Logo className={cx('header__logo')} />
+      <div className={cx('header__menu')}>
+        <div className={cx('header__buttons')}>
+          <div className={cx('header__wrapper')}>
+            <button type="button" className={cx('header__button')}>
               Log in
             </button>
-            <button type="button" className="header__button">
+            <button type="button" className={cx('header__button')}>
               Sign up
             </button>
           </div>
-          <div className={themeRound}>
+          <div className={cx('header__button_round')}>
             {theme === 'dark' ? (
               <ThemeDark
-                className="header__button header__button_theme"
+                className={cx('header__button', 'header__button_theme')}
                 onClick={themeToggler}
               />
             ) : (
               <ThemeLight
-                className="header__button header__button_theme header__button_theme-light"
+                className={cx('header__button', 'header__button_theme')}
                 onClick={themeToggler}
               />
             )}
           </div>
         </div>
       </div>
-      <button type="button" className="header__burger">
+      <button type="button" className={cx('header__burger')}>
         <Burger onClick={menuToggler} />
       </button>
-      <div className={modal}>
-        <div className="header__modal-overlay" />
-        <div className="header__modal-window">
-          <Cross className="header__modal-cross" onClick={menuToggler} />
-          <div className="header__modal-button">
+      <div
+        className={cx('header__modal', {
+          header__modal_active: menuActive,
+        })}
+      >
+        <div className={cx('header__modal-overlay')} />
+        <div className={cx('header__modal-window')}>
+          <Cross className={cx('header__modal-cross')} onClick={menuToggler} />
+          <div className={cx('header__modal-button')}>
             <button
               type="button"
-              className="header__modal-button_theme"
+              className={cx('header__modal-button_theme')}
               onClick={themeToggler}
             >
-              <div className={themeRound}>
+              <div className={cx('header__button_round')}>
                 {theme === 'dark' ? (
                   <ThemeDark
-                    className="header__button header__button_theme"
+                    className={cx('header__button', 'header__button_theme')}
                     onClick={themeToggler}
                   />
                 ) : (
                   <ThemeLight
-                    className="header__button header__button_theme header__button_theme-light"
+                    className={cx('header__button', 'header__button_theme')}
                     onClick={themeToggler}
                   />
                 )}
@@ -79,10 +79,14 @@ const Header: FC = () => {
               </Button>
             </button>
           </div>
-          <div className="header__modal-button header__modal-button_auth">
+          <div
+            className={cx('header__modal-button', 'header__modal-button_auth')}
+          >
             LOG IN
           </div>
-          <div className="header__modal-button header__modal-button_auth">
+          <div
+            className={cx('header__modal-button', 'header__modal-button_auth')}
+          >
             SIGN UP
           </div>
         </div>

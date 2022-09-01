@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
+import cn from 'classnames/bind';
 import { Arrow } from '../svgs/index';
-import './Card.scss';
+import styles from './Card.scss';
 
 type CardProps = {
   title: string;
@@ -10,15 +11,16 @@ type CardProps = {
 };
 
 const Card: FC<CardProps> = ({ title, imgUrl, name, year }) => {
+  const cx = cn.bind(styles);
   return (
-    <div className="card">
-      <img src={imgUrl} alt="Card" className="card__img" />
-      <div className="card__info">
-        <div className="card__title">{title}</div>
+    <div className={cx('card')}>
+      <img src={imgUrl} alt="Card" className={cx('card__img')} />
+      <div className={cx('card__info')}>
+        <div className={cx('card__title')}>{title}</div>
         <div>{name}</div>
-        <div className="card__year">{year}</div>
-        <div className="card__arrow">
-          <Arrow className="card__arrow-item" />
+        <div className={cx('card__year')}>{year}</div>
+        <div className={cx('card__arrow')}>
+          <Arrow className={cx('card__arrow-item')} />
         </div>
       </div>
     </div>
