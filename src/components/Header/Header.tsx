@@ -5,7 +5,7 @@ import { Logo, Burger, ThemeDark, ThemeLight, Cross } from '../svgs';
 import Button from '../Button';
 import './Header.scss';
 
-const Header: FC<HTMLElement> = () => {
+const Header: FC = () => {
   const { theme, themeToggler } = useContext(ThemeContext);
   const [menuActive, setMenu] = useState(false);
   useLayoutEffect(() => {

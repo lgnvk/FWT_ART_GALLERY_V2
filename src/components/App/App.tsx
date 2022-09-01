@@ -3,6 +3,7 @@ import { ThemeContext, defaultContext } from '../../context';
 import Header from '../Header';
 import Grid from '../Grid';
 import Footer from '../Footer';
+import cards from '../../data/cardsMock';
 import './App.scss';
 
 const App = () => {
@@ -20,7 +21,7 @@ const App = () => {
     <ThemeContext.Provider value={providerProps}>
       <div className="App">
         <Header />
-        <Grid />
+        <Grid cards={cards} />
         <Footer />
       </div>
     </ThemeContext.Provider>

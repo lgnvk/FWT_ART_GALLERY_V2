@@ -13,5 +13,5 @@ export const Default: ComponentStory<typeof Link> = (args) => (
 
 Default.args = {
   theme: 'dark',
-  value: 'something',
+  children: 'something',
 };

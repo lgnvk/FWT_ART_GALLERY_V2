@@ -1,18 +1,19 @@
-import React, { FC, ReactNode } from 'react';
+import React, { FC } from 'react';
+import type { ReactNode, ButtonHTMLAttributes } from 'react';
 import cn from 'classnames';
 import './Button.scss';
 
-type ButtonProps = HTMLButtonElement & {
-  handleClick: () => void;
-  theme: 'dark' | 'light';
-  buttonType: 'outlined' | 'filled';
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+  handleClick?: () => void;
+  theme?: 'dark' | 'light';
+  buttonType?: 'outlined' | 'filled';
   children: ReactNode;
 };
 
 const Button: FC<ButtonProps> = ({
   handleClick,
-  theme,
-  buttonType,
+  theme = 'light',
+  buttonType = 'outlined',
   children,
 }) => {
   const styles = cn('button', theme, buttonType);

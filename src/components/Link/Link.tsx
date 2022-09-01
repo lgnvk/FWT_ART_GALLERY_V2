@@ -1,8 +1,8 @@
-import React, { FC, ReactNode } from 'react';
+import React, { FC, ReactNode, LinkHTMLAttributes } from 'react';
 import cn from 'classnames';
 import './Link.scss';
 
-type LinkProps = HTMLAnchorElement & {
+type LinkProps = LinkHTMLAttributes<HTMLAnchorElement> & {
   theme: 'dark' | 'light';
   link: string;
   children: ReactNode;
