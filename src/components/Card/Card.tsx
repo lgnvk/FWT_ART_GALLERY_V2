@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import cn from 'classnames/bind';
-import { Arrow } from '../svgs/index';
+import Arrow from '../svgs/ArrowIcon';
 import styles from './Card.scss';
 
 type CardProps = {

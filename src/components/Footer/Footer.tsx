@@ -1,6 +1,9 @@
 import React, { FC } from 'react';
 import cn from 'classnames/bind';
-import { Vk, Facebook, Instagram } from '../svgs';
+import Vk from '../svgs/VkIcon';
+import Facebook from '../svgs/FacebookIcon';
+import Instagram from '../svgs/InstagramIcon';
+
 import styles from './Footer.scss';
 
 const Footer: FC = () => {

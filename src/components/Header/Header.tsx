@@ -1,7 +1,11 @@
 import React, { FC, useLayoutEffect, useContext, useState } from 'react';
 import cn from 'classnames/bind';
 import { ThemeContext } from '../../context';
-import { Logo, Burger, ThemeDark, ThemeLight, Cross } from '../svgs';
+import Logo from '../svgs/Logo';
+import Burger from '../svgs/Burger';
+import ThemeDark from '../svgs/ThemeDark';
+import ThemeLight from '../svgs/ThemeLight';
+import Cross from '../svgs/Cross';
 import Button from '../Button';
 import styles from './Header.scss';
 
