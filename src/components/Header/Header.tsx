@@ -22,7 +22,13 @@ const Header: FC = () => {
   };
   return (
     <div className={cx('header')}>
-      <Logo className={cx('header__logo')} />
+      <Logo
+        className={cx('header__logo')}
+        fill="var(--text-color)"
+        viewBox="0 0 39 15"
+        width={39}
+        height={15}
+      />
       <div className={cx('header__menu')}>
         <div className={cx('header__buttons')}>
           <div className={cx('header__wrapper')}>
@@ -38,19 +44,31 @@ const Header: FC = () => {
               <ThemeDark
                 className={cx('header__button', 'header__button_theme')}
                 onClick={themeToggler}
+                viewBox="0 0 20 20"
+                height={20}
+                width={20}
+                fill="var(--text-color)"
               />
             ) : (
               <ThemeLight
                 className={cx('header__button', 'header__button_theme')}
                 onClick={themeToggler}
+                viewBox="0 0 18 21"
+                height={15}
+                width={17}
+                fill="var(--text-color)"
               />
             )}
           </div>
         </div>
       </div>
-      <button type="button" className={cx('header__burger')}>
-        <Burger onClick={menuToggler} />
-      </button>
+      <Burger
+        className={cx('header__burger')}
+        onClick={menuToggler}
+        fill="var(--text-color)"
+        width={24}
+        height={18}
+      />
       <div
         className={cx('header__modal', {
           header__modal_active: menuActive,
@@ -58,7 +76,14 @@ const Header: FC = () => {
       >
         <div className={cx('header__modal-overlay')} />
         <div className={cx('header__modal-window')}>
-          <Cross className={cx('header__modal-cross')} onClick={menuToggler} />
+          <Cross
+            className={cx('header__modal-cross')}
+            onClick={menuToggler}
+            height={16}
+            width={16}
+            viewBox="0 0 16 16"
+            fill="var(--text-color)"
+          />
           <div className={cx('header__modal-button')}>
             <button
               type="button"
@@ -70,15 +95,23 @@ const Header: FC = () => {
                   <ThemeDark
                     className={cx('header__button', 'header__button_theme')}
                     onClick={themeToggler}
+                    fill="var(--text-color)"
+                    viewBox="0 0 20 20"
+                    height={20}
+                    width={20}
                   />
                 ) : (
                   <ThemeLight
                     className={cx('header__button', 'header__button_theme')}
                     onClick={themeToggler}
+                    viewBox="0 0 18 21"
+                    height={15}
+                    width={17}
+                    fill="var(--text-color)"
                   />
                 )}
               </div>
-              <Button theme={theme}>
+              <Button theme={theme} buttonType="outlined">
                 {theme === 'dark' ? 'light mode' : 'dark mode'}
               </Button>
             </button>

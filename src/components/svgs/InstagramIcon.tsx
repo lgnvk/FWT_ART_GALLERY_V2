@@ -2,14 +2,8 @@ import * as React from 'react';
 import { SVGProps } from 'react';
 
 const SvgInstagramIcon = (props: SVGProps<SVGSVGElement>) => (
-  <svg
-    width={24}
-    height={24}
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
-    <g clipPath="url(#instagram_icon_svg__a)" fill="#575757">
+  <svg fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <g clipPath="url(#instagram_icon_svg__a)">
       <path d="M12.635 14.092a2.183 2.183 0 0 1-2.724-1.458 2.184 2.184 0 1 1 2.724 1.458Z" />
       <path
         fillRule="evenodd"

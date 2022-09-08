@@ -75,13 +75,5 @@
     @media (min-width: 1440px) {
       display: none;
     }
-
-    &-item {
-      height: 100%;
-      width: 95%;
-      path {
-        fill: var(--primary-light-gray);
-      }
-    }
   }
 }

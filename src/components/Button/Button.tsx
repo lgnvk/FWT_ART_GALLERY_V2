@@ -5,15 +5,15 @@ import styles from './Button.scss';
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   handleClick?: () => void;
-  theme?: 'dark' | 'light';
-  buttonType?: 'outlined' | 'filled';
+  theme: 'dark' | 'light';
+  buttonType: 'outlined' | 'filled';
   children: ReactNode;
 };
 
 const Button: FC<ButtonProps> = ({
   handleClick,
-  theme = 'dark',
-  buttonType = 'outlined',
+  theme,
+  buttonType,
   children,
 }) => {
   const cx = cn.bind(styles);

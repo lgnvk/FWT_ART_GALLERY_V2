@@ -52,11 +52,6 @@
 
   &__social {
     margin-right: 20px;
-    height: 24px;
-    width: 24px;
-    path {
-      fill: var(--text-color);
-    }
     @media (min-width: 768px) {
       margin-right: 0;
       margin-left: 20px;

@@ -19,9 +19,27 @@ const Footer: FC = () => {
       </div>
 
       <div className={cx('footer__socials')}>
-        <Facebook className={cx('footer__social')} />
-        <Instagram className={cx('footer__social')} />
-        <Vk className={cx('footer__social')} />
+        <Facebook
+          className={cx('footer__social')}
+          width={24}
+          height={24}
+          viewBox="0 0 24 24"
+          fill="var(--text-color)"
+        />
+        <Instagram
+          className={cx('footer__social')}
+          width={24}
+          height={24}
+          viewBox="0 0 24 24"
+          fill="var(--text-color)"
+        />
+        <Vk
+          className={cx('footer__social')}
+          width={24}
+          height={24}
+          viewBox="0 0 24 24"
+          fill="var(--text-color)"
+        />
       </div>
     </div>
   );

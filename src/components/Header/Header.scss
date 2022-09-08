@@ -19,12 +19,6 @@
     }
   }
 
-  &__logo {
-    path {
-      fill: var(--text-color);
-    }
-  }
-
   &__button {
     height: 100%;
     background: none;
@@ -45,12 +39,6 @@
     }
 
     &_theme {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      path {
-        fill: var(--text-color);
-      }
       &:hover {
         path {
           fill: var(--header-theme-hover);
@@ -60,11 +48,6 @@
   }
 
   &__burger {
-    border: none;
-    background: none;
-    path {
-      fill: var(--text-color);
-    }
     @media (min-width: 1440px) {
       display: none;
     }
@@ -151,14 +134,9 @@
     }
 
     &-cross {
-      height: 16px;
-      width: 16px;
       position: absolute;
       top: 24px;
       right: 24px;
-      path {
-        fill: var(--text-color);
-      }
     }
   }
 }

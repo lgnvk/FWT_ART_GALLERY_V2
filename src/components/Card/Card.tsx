@@ -14,7 +14,13 @@ const Card: FC<CardType> = ({ title, imgUrl, name, year, id }) => {
         <div>{name}</div>
         <div className={cx('card__year')}>{year}</div>
         <div className={cx('card__arrow')}>
-          <Arrow className={cx('card__arrow-item')} />
+          <Arrow
+            className={cx('card__arrow-item')}
+            viewBox="0 0 24 24"
+            width="90%"
+            height="100%"
+            fill="var(--primary-light-gray)"
+          />
         </div>
       </div>
     </div>
