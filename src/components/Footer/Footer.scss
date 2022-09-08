@@ -1,5 +1,4 @@
 .footer {
-  background-color: var(--background-color);
   height: 185px;
   width: 100%;
   border-top: 1px solid var(--secondary-gray);
@@ -7,12 +6,13 @@
   font-family: Inter;
   font-weight: 300;
   font-size: 12px;
+
   @media (min-width: 768px) {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 20px 48px 20px;
   }
+
   @media (min-width: 1440px) {
     padding: 40px 100px 40px 100px;
   }
@@ -21,14 +21,17 @@
     color: var(--text-color);
     line-height: 17px;
     margin-bottom: 8px;
+
     span {
       font-weight: 700;
       text-decoration: underline;
     }
+
     @media (min-width: 768px) {
       font-size: 16px;
       margin-bottom: 0;
     }
+
     @media (min-width: 1440px) {
     }
   }
@@ -36,6 +39,7 @@
   &__author {
     color: var(--secondary-gray);
     margin-bottom: 20px;
+
     @media (min-width: 768px) {
       margin-bottom: 0;
       font-size: 16px;
@@ -44,6 +48,7 @@
 
   &__socials {
     display: flex;
+
     @media (min-width: 768px) {
       align-self: flex-start;
       justify-content: flex-end;
@@ -52,6 +57,7 @@
 
   &__social {
     margin-right: 20px;
+
     @media (min-width: 768px) {
       margin-right: 0;
       margin-left: 20px;
@@ -66,6 +72,7 @@
       flex-direction: column;
       justify-content: space-between;
     }
+
     @media (min-width: 1440px) {
       width: 40%;
       display: flex;

@@ -22,7 +22,9 @@ const App = () => {
     <ThemeContext.Provider value={providerProps}>
       <div className={cx('app')}>
         <Header />
-        <Grid cards={cards} />
+        <main className="app__grid">
+          <Grid cards={cards} />
+        </main>
         <Footer />
       </div>
     </ThemeContext.Provider>

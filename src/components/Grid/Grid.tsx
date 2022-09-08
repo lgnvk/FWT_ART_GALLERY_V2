@@ -11,10 +11,10 @@ type GridProps = {
 const Grid: FC<GridProps> = ({ cards }) => {
   const cx = cn.bind(styles);
   return (
-    <div className={cx('grid')}>
+    <ul className={cx('grid')}>
       {cards.map(({ id, imgUrl, title, name, year }) => {
         return (
-          <div key={id} className={cx('grid__item')}>
+          <li key={id} className={cx('grid__item')}>
             <Card
               imgUrl={imgUrl}
               title={title}
@@ -22,10 +22,10 @@ const Grid: FC<GridProps> = ({ cards }) => {
               year={year}
               id={id}
             />
-          </div>
+          </li>
         );
       })}
-    </div>
+    </ul>
   );
 };
 

@@ -22,7 +22,45 @@ const Header: FC = () => {
   };
   return (
     <div className={cx('header')}>
-      <Logo
+      <nav className={cx('header__nav')}>
+        <Logo
+          className={cx('header__logo')}
+          fill="var(--text-color)"
+          viewBox="0 0 39 15"
+          width={39}
+          height={15}
+        />
+        <div className={cx('header__wrapper')}>
+          <button type="button" className={cx('header__button')}>
+            Log in
+          </button>
+          <button type="button" className={cx('header__button')}>
+            Sign up
+          </button>
+        </div>
+      </nav>
+      <div className={cx('header__button_round', 'invisible')}>
+        {theme === 'dark' ? (
+          <ThemeDark
+            className={cx('header__button', 'header__button_theme')}
+            onClick={themeToggler}
+            viewBox="0 0 20 20"
+            height={20}
+            width={20}
+            fill="var(--text-color)"
+          />
+        ) : (
+          <ThemeLight
+            className={cx('header__button', 'header__button_theme')}
+            onClick={themeToggler}
+            viewBox="0 0 18 21"
+            height={15}
+            width={17}
+            fill="var(--text-color)"
+          />
+        )}
+      </div>
+      {/* <Logo
         className={cx('header__logo')}
         fill="var(--text-color)"
         viewBox="0 0 39 15"
@@ -61,7 +99,7 @@ const Header: FC = () => {
             )}
           </div>
         </div>
-      </div>
+      </div> */}
       <Burger
         className={cx('header__burger')}
         onClick={menuToggler}

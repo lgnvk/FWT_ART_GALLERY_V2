@@ -21,13 +21,16 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     @media (min-width: 768px) {
       height: 28%;
       width: 87%;
     }
+
     @media (min-width: 1440px) {
       height: 32%;
       width: 76%;
+
       &:before {
         content: '';
         position: absolute;
@@ -44,6 +47,7 @@
     font-family: Cormorant;
     font-weight: 500;
     color: var(--text-color);
+
     @media (min-width: 768px) {
       font-size: 16px;
     }
@@ -55,6 +59,7 @@
     font-size: 8px;
     font-family: Inter;
     color: var(--accent-color);
+
     @media (min-width: 768px) {
       font-size: 12px;
     }
@@ -69,9 +74,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
     @media (min-width: 768px) {
       width: 8%;
     }
+
     @media (min-width: 1440px) {
       display: none;
     }
