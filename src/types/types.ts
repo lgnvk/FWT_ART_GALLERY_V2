@@ -5,3 +5,8 @@ export type CardType = {
   imgUrl: string;
   year: string;
 };
+
+export type ThemeType = {
+  theme: 'dark' | 'light';
+  themeToggler?: () => void;
+};

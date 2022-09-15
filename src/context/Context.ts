@@ -1,9 +1,5 @@
 import React from 'react';
-
-type ThemeType = {
-  theme: 'dark' | 'light';
-  themeToggler?: () => void;
-};
+import { ThemeType } from '../types/types';
 
 export const defaultContext: ThemeType = {
   theme: 'dark',
