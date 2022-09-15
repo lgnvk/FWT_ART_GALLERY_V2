@@ -48,6 +48,7 @@
 
   &__socials {
     display: flex;
+    margin-top: 15px;
 
     @media (min-width: 768px) {
       align-self: flex-start;
