@@ -71,10 +71,13 @@
     background-color: var(--accent-color);
     position: absolute;
     right: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
+    &-item {
+      height: 100%;
+      width: 80%;
+      display: flex;
+      padding-left: 15%;
+    }
     @media (min-width: 768px) {
       width: 8%;
     }

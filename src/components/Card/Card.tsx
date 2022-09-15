@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import cn from 'classnames/bind';
 import { CardType } from '../../types/types';
-import Arrow from '../svgs/ArrowIcon';
+import { ReactComponent as Arrow } from '../../assets/img/svg/Arrow.svg';
 import styles from './Card.scss';
 
 const Card: FC<CardType> = ({ title, imgUrl, name, year, id }) => {
@@ -14,13 +14,7 @@ const Card: FC<CardType> = ({ title, imgUrl, name, year, id }) => {
         <div>{name}</div>
         <div className={cx('card__year')}>{year}</div>
         <div className={cx('card__arrow')}>
-          <Arrow
-            className={cx('card__arrow-item')}
-            viewBox="0 0 24 24"
-            width="90%"
-            height="100%"
-            fill="var(--primary-light-gray)"
-          />
+          <Arrow className={cx('card__arrow-item')} fill="var(--text-color)" />
         </div>
       </div>
     </div>

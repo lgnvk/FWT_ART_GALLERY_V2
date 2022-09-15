@@ -1,4 +1,4 @@
-import img from '../img/image.jpg';
+import img from '../assets/img/image.jpg';
 
 const cards = [
   { id: 1, title: 'asd', name: 'awr', imgUrl: img, year: '123-123' },
