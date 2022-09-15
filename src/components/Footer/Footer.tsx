@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import cn from 'classnames/bind';
-import Vk from '../svgs/VkIcon';
-import Facebook from '../svgs/FacebookIcon';
-import Instagram from '../svgs/InstagramIcon';
+import { ReactComponent as Vk } from '../../assets/img/svg/Vkontakte.svg';
+import { ReactComponent as Facebook } from '../../assets/img/svg/Facebook.svg';
+import { ReactComponent as Instagram } from '../../assets/img/svg/Instagram.svg';
 
 import styles from './Footer.scss';
 

@@ -1,16 +1,17 @@
 import React, { FC, useLayoutEffect, useContext, useState } from 'react';
 import cn from 'classnames/bind';
 import { ThemeContext } from '../../context';
-import Logo from '../svgs/Logo';
-import Burger from '../svgs/Burger';
-import ThemeDark from '../svgs/ThemeDark';
-import ThemeLight from '../svgs/ThemeLight';
-import Cross from '../svgs/Cross';
+import { ThemeType } from '../../types/types';
+import {ReactComponent as Logo} from '../../assets/img/svg/Logo.svg';
+import {ReactComponent as Burger} from '../../assets/img/svg/Burger.svg';
+import {ReactComponent as ThemeDark} from '../../assets/img/svg/ThemeSun.svg';
+import {ReactComponent as ThemeLight} from '../../assets/img/svg/ThemeMoon.svg';
+import {ReactComponent as Cross} from '../../assets/img/svg/CloseIcon.svg';
 import Button from '../Button';
 import styles from './Header.scss';
 
 const Header: FC = () => {
-  const { theme, themeToggler } = useContext(ThemeContext);
+  const { theme, themeToggler } = useContext<ThemeType>(ThemeContext);
   const [menuActive, setMenu] = useState(false);
   const cx = cn.bind(styles);
 
@@ -26,9 +27,6 @@ const Header: FC = () => {
         <Logo
           className={cx('header__logo')}
           fill="var(--text-color)"
-          viewBox="0 0 39 15"
-          width={39}
-          height={15}
         />
         <div className={cx('header__wrapper')}>
           <button type="button" className={cx('header__button')}>
