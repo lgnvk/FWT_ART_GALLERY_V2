@@ -16,9 +16,6 @@ type MenuType = {
 const Menu: FC<MenuType> = ({ menuActive, menuToggler }) => {
   const { theme, themeToggler } = useContext<ThemeType>(ThemeContext);
   const cx = cn.bind(styles);
-  const menuClose = () => {
-    menuToggler();
-  };
 
   return (
     <div
@@ -28,7 +25,7 @@ const Menu: FC<MenuType> = ({ menuActive, menuToggler }) => {
     >
       <div className={cx('menu__content')}>
         <div className={cx('menu__close')}>
-          <Close fill="var(--text-color)" onClick={menuClose} />
+          <Close fill="var(--text-color)" onClick={menuToggler} />
         </div>
         <div className={cx('menu__buttons')}>
           <button
