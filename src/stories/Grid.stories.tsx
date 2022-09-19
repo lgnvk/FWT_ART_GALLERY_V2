@@ -1,8 +1,7 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import Grid from '.';
-import './Grid.scss';
-import img from '../../img/image.jpg';
+import Grid from '../components/UI/Grid';
+import img from '../assets/img/image.jpg';
 
 export default {
   title: 'Grid',

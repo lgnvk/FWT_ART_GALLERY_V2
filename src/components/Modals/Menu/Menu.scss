@@ -1,0 +1,145 @@
+.menu {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  overflow: hidden;
+  right: -100%;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: end;
+  transition: right 1s;
+  transition-delay: 0.2s;
+
+  &__background {
+    background-color: rgb(0, 0, 0, 0.6);
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  &__close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    z-index: 2;
+  }
+
+  &__content {
+    height: 100vh;
+    width: 252px;
+    position: absolute;
+    right: -100%;
+    background-color: var(--background-color);
+    transition: right 0.5s;
+    z-index: 3;
+
+    @media (min-width: 768px) {
+      width: 466px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 144px;
+    margin-left: 48px;
+
+    @media (min-width: 768px) {
+      margin-top: 200px;
+      margin-left: 94px;
+    }
+  }
+
+  &__button {
+    &_dark {
+      &:hover {
+        path {
+          fill: var(--header-theme-hover);
+        }
+      }
+    }
+
+    &_light {
+      &:hover {
+        path {
+          fill: var(--header-theme-hover);
+        }
+      }
+    }
+
+    &-theme {
+      width: fit-content;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      background: none;
+      border: none;
+    }
+
+    &-round {
+      height: 40px;
+      width: 40px;
+      border-radius: 100%;
+      background-color: var(--header-theme-round);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 15px;
+    }
+
+    &-log-in {
+      width: fit-content;
+      font-size: 32px;
+      font-weight: 600;
+      font-family: Cormorant;
+      background: none;
+      border: none;
+      margin-top: 40px;
+      color: var(--text-color);
+      text-transform: uppercase;
+
+      @media (min-width: 768px) {
+        font-size: 60px;
+        font-weight: 500;
+        margin-top: 60px;
+      }
+    }
+
+    &-sign-up {
+      width: fit-content;
+      font-size: 32px;
+      font-weight: 600;
+      font-family: Cormorant;
+      background: none;
+      border: none;
+      margin-top: 32px;
+      color: var(--text-color);
+      text-transform: uppercase;
+
+      @media (min-width: 768px) {
+        font-size: 60px;
+        font-weight: 500;
+        margin-top: 40px;
+      }
+    }
+  }
+
+  &.menuActive {
+    right: 0;
+    transition: right 0s;
+
+    .menu {
+      &__background {
+        opacity: 1;
+        transition: opacity 0.3s;
+      }
+
+      &__content {
+        right: 0;
+        transition: right 0.5s;
+      }
+    }
+  }
+}

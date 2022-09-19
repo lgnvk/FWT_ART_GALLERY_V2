@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import cn from 'classnames/bind';
-import { CardType } from '../../types/types';
+import { CardType } from '../../../types/types';
 import Card from '../Card';
 import styles from './Grid.scss';
 

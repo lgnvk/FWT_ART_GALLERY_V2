@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import Link from '.';
+import Link from '../components/UI/Link';
 
 export default {
   title: 'Link',

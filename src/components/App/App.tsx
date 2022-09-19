@@ -1,9 +1,8 @@
 import React, { useState, useMemo } from 'react';
 import cn from 'classnames/bind';
 import { ThemeContext, defaultContext } from '../../context';
-import Header from '../Header';
-import Grid from '../Grid';
-import Footer from '../Footer';
+import Layout from '../Layout';
+import Grid from '../UI/Grid';
 import cards from '../../data/cardsMock';
 import styles from './App.scss';
 
@@ -21,11 +20,11 @@ const App = () => {
   return (
     <ThemeContext.Provider value={providerProps}>
       <div className={cx('app')}>
-        <Header />
-        <main className="app__grid">
-          <Grid cards={cards} />
-        </main>
-        <Footer />
+        <Layout>
+          <main className="app__grid">
+            <Grid cards={cards} />
+          </main>
+        </Layout>
       </div>
     </ThemeContext.Provider>
   );
