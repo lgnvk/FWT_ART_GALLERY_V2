@@ -2,7 +2,7 @@ import React, { FC, useContext } from 'react';
 import cn from 'classnames/bind';
 import { ThemeContext } from '../../../context';
 import Button from '../../UI/Button';
-import { ThemeType } from '../../../types/types';
+import type { ThemeType } from '../../../types/types';
 import { ReactComponent as Close } from '../../../assets/img/svg/CloseIcon.svg';
 import { ReactComponent as ThemeDark } from '../../../assets/img/svg/ThemeSun.svg';
 import { ReactComponent as ThemeLight } from '../../../assets/img/svg/ThemeMoon.svg';
