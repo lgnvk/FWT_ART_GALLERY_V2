@@ -1,0 +1,100 @@
+.card {
+  position: relative;
+  font-size: 0;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+
+  &:hover {
+    .card {
+      &__img {
+        scale: 1.2;
+        transition: scale 0.7s;
+      }
+    }
+  }
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+    transition: scale 0.7s;
+  }
+
+  &__info {
+    width: 92%;
+    height: 25%;
+    bottom: 0;
+    position: absolute;
+    background-color: var(--background-color);
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media (min-width: 768px) {
+      height: 28%;
+      width: 87%;
+    }
+
+    @media (min-width: 1440px) {
+      height: 32%;
+      width: 76%;
+
+      &:before {
+        content: '';
+        position: absolute;
+        height: 50%;
+        width: 2px;
+        background-color: var(--accent-color);
+      }
+    }
+  }
+
+  &__title {
+    margin-left: 12px;
+    font-size: 12px;
+    font-family: Cormorant;
+    font-weight: 500;
+    color: var(--text-color);
+
+    @media (min-width: 768px) {
+      font-size: 16px;
+    }
+  }
+
+  &__year {
+    margin-left: 12px;
+    margin-top: 4px;
+    font-size: 8px;
+    font-family: Inter;
+    color: var(--accent-color);
+
+    @media (min-width: 768px) {
+      font-size: 12px;
+    }
+  }
+
+  &__arrow {
+    width: 10%;
+    height: 100%;
+    background-color: var(--accent-color);
+    position: absolute;
+    right: 0;
+
+    &-item {
+      height: 100%;
+      width: 80%;
+      display: flex;
+      padding-left: 15%;
+    }
+
+    @media (min-width: 768px) {
+      width: 8%;
+    }
+
+    @media (min-width: 1440px) {
+      display: none;
+    }
+  }
+}
