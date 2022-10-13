@@ -1,21 +1,22 @@
-import React, { FC, useLayoutEffect, useContext, useState } from 'react';
+import React, { FC, useLayoutEffect, useState, useContext } from 'react';
 import cn from 'classnames/bind';
 import { ThemeContext } from '../../context';
 import { ThemeType } from '../../types/types';
+import Menu from '../Modals/Menu';
 import { ReactComponent as Logo } from '../../assets/img/svg/Logo.svg';
 import { ReactComponent as Burger } from '../../assets/img/svg/Burger.svg';
 import { ReactComponent as ThemeDark } from '../../assets/img/svg/ThemeSun.svg';
 import { ReactComponent as ThemeLight } from '../../assets/img/svg/ThemeMoon.svg';
-import Menu from '../Modals/Menu';
 import styles from './Header.scss';
 
 const Header: FC = () => {
-  const { theme, themeToggler } = useContext<ThemeType>(ThemeContext);
-  const [menuActive, setMenu] = useState(false);
   const cx = cn.bind(styles);
+  const [menuActive, setMenu] = useState(false);
+  const { theme, themeToggler } = useContext<ThemeType>(ThemeContext);
 
   useLayoutEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
   }, [theme]);
 
   const menuToggler = () => {

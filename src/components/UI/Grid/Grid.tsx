@@ -1,18 +1,16 @@
 import React, { FC } from 'react';
 import cn from 'classnames/bind';
-import { CardType } from '../../../types/types';
+import { useAppSelector } from '../../../store/hooks';
 import Card from '../Card';
+import type { AuthorsGridType } from '../../../types/types';
 import styles from './Grid.scss';
 
-type GridProps = {
-  cards: CardType[];
-};
-
-const Grid: FC<GridProps> = ({ cards }) => {
+const Grid: FC<AuthorsGridType> = () => {
   const cx = cn.bind(styles);
+  const authors = useAppSelector((state) => state.main.cards);
   return (
     <ul className={cx('grid')}>
-      {cards.map(({ id, imgUrl, title, name, year }) => {
+      {authors.map(({ id, imgUrl, title, name, year }) => {
         return (
           <li key={id} className={cx('grid__item')}>
             <Card

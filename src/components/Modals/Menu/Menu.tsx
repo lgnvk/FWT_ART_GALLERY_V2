@@ -14,8 +14,8 @@ type MenuType = {
 };
 
 const Menu: FC<MenuType> = ({ menuActive, menuToggler }) => {
-  const { theme, themeToggler } = useContext<ThemeType>(ThemeContext);
   const cx = cn.bind(styles);
+  const { theme, themeToggler } = useContext<ThemeType>(ThemeContext);
 
   return (
     <div

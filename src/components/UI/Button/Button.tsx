@@ -5,7 +5,7 @@ import styles from './Button.scss';
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   handleClick?: () => void;
-  theme: 'dark' | 'light';
+  theme: string;
   buttonType: 'outlined' | 'filled';
   children: ReactNode;
 };

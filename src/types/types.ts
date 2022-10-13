@@ -6,6 +6,10 @@ export type CardType = {
   year: string;
 };
 
+export type AuthorsGridType = {
+  cards: CardType[];
+};
+
 export type ThemeType = {
   theme: 'dark' | 'light';
   themeToggler?: () => void;

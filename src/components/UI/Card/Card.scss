@@ -2,7 +2,7 @@
   position: relative;
   font-size: 0;
   width: 100%;
-  height: auto;
+  min-height: 185px;
   overflow: hidden;
 
   &:hover {
@@ -22,8 +22,8 @@
   }
 
   &__info {
-    width: 92%;
-    height: 25%;
+    width: calc(100% - 20px);
+    height: 24.3%;
     bottom: 0;
     position: absolute;
     background-color: var(--background-color);
