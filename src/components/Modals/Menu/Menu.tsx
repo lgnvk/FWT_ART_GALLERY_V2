@@ -1,7 +1,8 @@
-import React, { FC } from 'react';
+import React, { FC, useContext } from 'react';
 import cn from 'classnames/bind';
-import { useAppSelector } from '../../../store/hooks';
+import { ThemeContext } from '../../../context';
 import Button from '../../UI/Button';
+import type { ThemeType } from '../../../types/types';
 import { ReactComponent as Close } from '../../../assets/img/svg/CloseIcon.svg';
 import { ReactComponent as ThemeDark } from '../../../assets/img/svg/ThemeSun.svg';
 import { ReactComponent as ThemeLight } from '../../../assets/img/svg/ThemeMoon.svg';
@@ -10,12 +11,11 @@ import styles from './Menu.scss';
 type MenuType = {
   menuActive: boolean;
   menuToggler: () => void;
-  themeToggler: () => void;
 };
 
-const Menu: FC<MenuType> = ({ menuActive, menuToggler, themeToggler }) => {
+const Menu: FC<MenuType> = ({ menuActive, menuToggler }) => {
   const cx = cn.bind(styles);
-  const theme = useAppSelector((state) => state.theme);
+  const { theme, themeToggler } = useContext<ThemeType>(ThemeContext);
 
   return (
     <div

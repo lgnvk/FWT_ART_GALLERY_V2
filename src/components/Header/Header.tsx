@@ -1,7 +1,7 @@
-import React, { FC, useLayoutEffect, useState } from 'react';
+import React, { FC, useLayoutEffect, useState, useContext } from 'react';
 import cn from 'classnames/bind';
-import { useAppDispatch, useAppSelector } from '../../store/hooks';
-import { set } from '../../features/theme/theme-slice';
+import { ThemeContext } from '../../context';
+import { ThemeType } from '../../types/types';
 import Menu from '../Modals/Menu';
 import { ReactComponent as Logo } from '../../assets/img/svg/Logo.svg';
 import { ReactComponent as Burger } from '../../assets/img/svg/Burger.svg';
@@ -12,18 +12,12 @@ import styles from './Header.scss';
 const Header: FC = () => {
   const cx = cn.bind(styles);
   const [menuActive, setMenu] = useState(false);
-  const theme = useAppSelector((state) => state.theme);
-  const dispatch = useAppDispatch();
+  const { theme, themeToggler } = useContext<ThemeType>(ThemeContext);
 
   useLayoutEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
   }, [theme]);
-
-  const themeToggler = () => {
-    const currentTheme = theme === 'dark' ? 'light' : 'dark';
-    dispatch(set(currentTheme));
-  };
 
   const menuToggler = () => {
     setMenu(!menuActive);
@@ -62,11 +56,7 @@ const Header: FC = () => {
         onClick={menuToggler}
         fill="var(--text-color)"
       />
-      <Menu
-        menuToggler={menuToggler}
-        menuActive={menuActive}
-        themeToggler={themeToggler}
-      />
+      <Menu menuToggler={menuToggler} menuActive={menuActive} />
     </div>
   );
 };
